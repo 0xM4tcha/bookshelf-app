@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, input, button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #EEF2E6;
+}
+
+input, button {
+  font-size: 16px;
+}
+
+button:hover, .close:hover, .book-shelf-header:hover {
+  cursor: pointer;
+}
+
+.header-section {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C6758;
+  color: #EEF2E6;
+}
+
+main {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.search-section > form {
+  display: flex;
+  gap: 6px;
+}
+
+.search-section > form > input {
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  padding: 8px;
+  width: 100%;
+}
+.search-section > form > button {
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1C6758;
+  color: white;
+} 
+
+.book-shelf-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.book-shelf {
+  width: 100%;
+  margin: 16px 0 0 0;
+}
+
+.book-shelf > div {
+  max-height: 600px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.book-shelf-header {
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  transition: transform .2s;
+}
+
+.book-shelf-header:hover {
+  transform: scale(1.05);
+}
+
+.in-proggress {
+  background-color: #D6CDA4;
+  color: #EEF2E6;
+}
+
+.complete {
+  background-color: #3D8361;
+  color: #EEF2E6;
+}
+
+.form-wrapper > .header {
+  display: flex;
+  justify-content: space-between;
+  color: #3D8361;
+  padding-bottom: 24px;
+}
+.form-wrapper > .body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-wrapper > .body > .input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input > input {
+  flex: 1.5;
+  border: none;
+  border-radius: 8px;
+  padding: 4px;
+  padding-left: 8px;
+}
+
+.input > label {
+  flex: 0.5;
+  font-weight: bold;
+}
+
+.body > button {
+  padding: 8px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1C6758;
+  color: #EEF2E6;
+}
+
+.book-card {
+  border-radius: 8px;
+  padding: 14px;
+  background-color: white;
+}
+
+.book-card > .button-section {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.button-delete {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.button-action {
+  background-color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+.book-card > .button-section > .button-action.onproggress {
+  border: 1px solid #3D8361;
+  color: #3D8361;
+}
+.book-card > .button-section > .button-action.complete {
+  border: 1px solid #D6CDA4;
+  color: #D6CDA4;
+}
+
+.book-card > .button-section > button {
+  cursor: pointer;
+}
+
+
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal {
+  background-color: #fefefe;
+  border-radius: 8px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.modal-delete-book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal > .action {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.modal > .action > .button-action {
+  border: 1px solid #3D8361;
+  color: #3D8361;
+}
+

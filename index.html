@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="render()">
+
+  <header class="header-section">
+    <h1 class="header-title">Bookshelf Apps</h1>
+  </header>
+
+  <main class="main" hidden>
+
+    <section class="search-section">
+      <form id="searchBook">
+        <input id="searchBookTitle" type="text" placeholder="Search Title Book">
+        <button id="searchSubmit" type="submit">Cari</button>
+      </form>
+    </section>
+
+    <section class="book-shelf-wrapper">
+      <div class="book-shelf">
+        <section class="book-shelf-header in-proggress" onclick="addBook(false)">
+          <h5>INPROGRESS </h5>
+          <h5>&plus;</h5>
+        </section>
+        <div id="incompleteBooks" class="book-shelf-body"></div>
+      </div>
+      <div class="book-shelf">
+        <section class="book-shelf-header complete" onclick="addBook(true)">
+          <h5>COMPLETE </h5>
+          <h5>&plus;</h5>
+        </section>
+        <div id="completeBooks" class="book-shelf-body"></div>
+      </div>
+    </section>
+
+    <div id="modal-container" class="modal-container" hidden>
+      <div id="modal" class="modal">
+      </div>
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
